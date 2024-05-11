@@ -4,15 +4,7 @@ import { useRef } from 'react';
 import { CgNotes } from "react-icons/cg";
 import Header from './header';
 
-export function deleteTodo (deleteValue)  {
-  const restTodoList = [
-    ...todos.filter((val) => {
-      return todos !== deleteValue;
 
-    }),
-  ];
-  Settodos(restTodoList);
-};
 
 export default function Foreground() {
   const [todo, Settodo] = useState("");  
@@ -20,6 +12,15 @@ export default function Foreground() {
   const [important, setImportant] = useState(false); 
   const ref = useRef(null);
   const sample = {desc: "This is A sample note         TRY dragging it Around !!!", close:false, tag:{isOpen:true,Tagtitle:"Copy Note" , TagColor:"green"}, importance:true}
+  
+  function deleteTodo (deleteValue)  {
+    const restTodoList = [
+      ...todos.filter((val) => {
+        return val!== deleteValue;
+      }),
+    ];
+    Settodos(restTodoList);
+  };
 
   const Handleform =(e)=>{
     e.preventDefault();
@@ -64,9 +65,9 @@ export default function Foreground() {
       </div> 
       <div ref={ref} className='fixed z-[3] top-40 left-0 w-full h-screen flex gap-5 fex-wrap flex-row p-5'>
         {todos.map((item, index) => (
-          <Card key={index} data={item} referenco={ref}/>
+          <Card key={index} data={item} referenco={ref} deleteTodo={deleteTodo}/>
         ))}
-        <Card data={sample} referenco={ref}/>
+        <Card data={sample} referenco={ref} deleteTodo={deleteTodo}/>
       </div>
     </>
   )
