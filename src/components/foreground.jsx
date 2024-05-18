@@ -30,10 +30,9 @@ export default function Foreground() {
       setImportant(false); 
     }
   }
-  
-
-  // console.log(todos);
-
+  const editTodo = (updatedTodo) => {
+    Settodos(todos.map(todo => todo.id === updatedTodo.id ? updatedTodo : todo));
+  };
   return (
     <>
       <Header/>
@@ -65,7 +64,7 @@ export default function Foreground() {
       </div> 
       <div ref={ref} className='fixed z-[3] top-40 left-0 w-full h-screen flex gap-5 fex-wrap flex-row p-5'>
         {todos.map((item, index) => (
-          <Card key={index} data={item} referenco={ref} deleteTodo={deleteTodo}/>
+          <Card key={index} data={item} referenco={ref} deleteTodo={deleteTodo} editTodo={editTodo}/>
         ))}
         <Card data={sample} referenco={ref} deleteTodo={deleteTodo}/>
       </div>
@@ -73,4 +72,4 @@ export default function Foreground() {
   )
 }
 
-// export default Foreground;
+

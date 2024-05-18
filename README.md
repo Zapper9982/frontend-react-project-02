@@ -1,9 +1,31 @@
-# React + Vite
+# WobbleNotes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  This is frontend based temporary notes storing app which has a dynamic drag function allowing u to place a note anywhere withing the screen . It is fun to play around.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# frontend-react-project-02
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+Instructions on how to install and set up your project.
+
+## Usage
+
+Instructions on how to use your project and any relevant examples.
+
+## Features
+
+A list of the main features of your project.
+
+## Contributing
+
+Guidelines on how others can contribute to your project.
+
+## License
+
+Information about the license under which your project is distributed.
